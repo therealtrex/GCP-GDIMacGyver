@@ -68,14 +68,14 @@ From the IAM screen you will see a number of accounts. There should be one calle
 ### Create a Pub/Sub Topic
 - From your Google Cloud Console. `Select The Top left hand handburger` followed by `VIEW ALL PRODUCTS`
 
-![image_tag](/static/Lab2_gcpaddon_cli/image10.png)
+![image_tag](/static/Lab2_dataflow/image10.png)
 
 - Select `Analytics` on the left hand menu then `select Pub/Sub`
 - From the Pub/Sub screen select `+ CREATE TOPIC`
 - Name your topic `splunk-dataflow-topic`
 - `Click Create` leaving all other defaults
 
-![image_tag](/static/Lab2_gcpaddon/image11.png)
+![image_tag](/static/Lab2_dataflow/image11.png)
 
 >[!NOTE]
 > This will take around 15 seconds to create.
@@ -85,21 +85,21 @@ From the IAM screen you will see a number of accounts. There should be one calle
 - `Select Observability`
 - `Select Logging`
 
-![image_tag](/static/Lab1_gcpaddon/image23.png)
+![image_tag](/static/Lab2_dataflow/image23.png)
 
 - On the left hand menu (you may need to hover your mouse over it to expand it) `select Log Router` (near the bottom)
 
-![image_tag](/static/Lab1_gcpaddon/image24.png)
+![image_tag](/static/Lab2_dataflow/image24.png)
 
 - `Select Create sink`
 - name the sink `splunk-dataflow-sink`
 - click next
 
-![image_tag](/static/Lab1_gcpaddon/image25.png)
+![image_tag](/static/Lab2_dataflow/image25.png)
 
 - For Sink destination `select Splunk` as the sing service and the `splunk-dataflow-topic` Pub/Sub topic we just created in the Pub/Sub topic; see example below
 
-![image_tag](/static/Lab1_gcpaddon/image26.png)
+![image_tag](/static/Lab2_dataflow/image26.png)
 
 >[!NOTE]
 > Do not accidentally select then non dataflow one we created from Lab1. 
@@ -110,7 +110,7 @@ From the IAM screen you will see a number of accounts. There should be one calle
 >[!NOTE]
 > This means we will be sending everything by default
 
-![image_tag](/static/Lab1_gcpaddon/image27.png)
+![image_tag](/static/Lab2_dataflow/image27.png)
 
 - `Select + Add exclusion` for Choose logs to filter out of sink(optional)
 - enter in `exclude_dataflow` as Exclusion filter name
@@ -119,7 +119,7 @@ From the IAM screen you will see a number of accounts. There should be one calle
 ```test
 resource.type="dataflow_step"
 ```
-![image_tag](/static/Lab1_gcpaddon/image28.png)
+![image_tag](/static/Lab2_dataflow/image28.png)
 
 >[!WARNING]
 > If we don't put this exclusion in then the logs from dataflow will be sent to dataflow creating more logs and therefore we would have just created a log infinite loop!
@@ -127,28 +127,28 @@ resource.type="dataflow_step"
 - `Click Create sink` when ready
 - Once completed it should say this
 
-![image_tag](/static/Lab1_gcpaddon/image29.png)
+![image_tag](/static/Lab2_dataflow/image29.png)
 
 ## Creating Dead Letter Queue
 - From your Google Cloud Console. `Select The Top left hand handburger` followed by `VIEW ALL PRODUCTS`
 
-![image_tag](/static/Lab2_gcpaddon_cli/image10.png)
+![image_tag](/static/Lab2_dataflow/image10.png)
 
 - Select `Analytics` on the left hand menu then `select Pub/Sub`
 - From the Pub/Sub screen select `+ CREATE TOPIC`
 - Name your topic `splunk-dataflow-deadletter-topic`
 - `Click Create` leaving all other defaults
 
-![image_tag](/static/Lab2_gcpaddon_cli/image11.png)
+![image_tag](/static/Lab2_dataflow/image11.png)
 
 - While on the Pub/Sub topic page under the Subscriptions section, select CREATE SUBSCRIPTION
 
-![image_tag](/static/Lab2_gcpaddon_cli/image12.png)
+![image_tag](/static/Lab2_dataflow/image12.png)
 
 - Enter `deadletter` as Subscription ID
 - Leave all other defaults, scroll down and `click Create`
 
-![image_tag](/static/Lab2_gcpaddon_cli/image13.png)
+![image_tag](/static/Lab2_dataflow/image13.png)
 
 - Whle on the pub/sub page, select topics
 
