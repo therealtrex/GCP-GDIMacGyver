@@ -1,9 +1,9 @@
-# Lab 1: Ingesting GCP cloud logging data into Splunk using the Splunk Add-on for GCP (PULL) method. 
+# Ingesting GCP cloud logging data into Splunk using the Splunk Add-on for GCP (PULL) method. 
 Welcome to Lab 1. Let's get into it! 
 
 >[!NOTE]
 >Usually this lab would have a two pre-requisites of the <a>[GCP add-on](https://splunkbase.splunk.com/app/3088)</a> installed on your Splunk intallation and a Splunk index to store all the data. To make things simpler we have already done this.
->Throughout this lab whenever you are prompted to enter a Splunk index please use <b>gcp_data</b> 
+>Throughout this lab whenever you are prompted to select a Splunk index please use <b>gcp_data</b> 
 
 ### Create a Pub/Sub Topic
 - From your Google Cloud Console. `Select The Top left hand handburger` followed by `VIEW ALL PRODUCTS`
@@ -12,7 +12,7 @@ Welcome to Lab 1. Let's get into it!
 
 - Select `Analytics` on the left hand menu then `select Pub/Sub`
 - From the Pub/Sub screen select `+ CREATE TOPIC`
-- Name your topic `ta_subscription`
+- Name your topic `gcp_ta_topic`
 - `Click Create` leaving all other defaults
 
 ![image_tag](/static/Lab1_gcpaddon/image30.png)
