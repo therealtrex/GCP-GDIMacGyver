@@ -80,6 +80,31 @@ From the IAM screen you will see a number of accounts. There should be one calle
 >[!NOTE]
 > This will take around 15 seconds to create.
 
+### Create subscription to store items forwarded to Deadletter queue
+- From your Google Cloud Topic page (you should be there after creating topic before) select CREATE SUBSCRIPTION
+
+![image_tag](/static/Lab2_dataflow/image21.png)
+
+- Name your subscription id `deadletter`
+- Scroll to bottom leaving all remaining defaults and select 'CREATE'
+
+![image_tag](/static/Lab2_dataflow/image22.png)
+
+- Once created you should see something similar to the below
+
+![image_tag](/static/Lab2_dataflow/image23.png)
+
+### Assign a topy
+- From the same page now `select Topics`
+
+>[!NOTE]
+> If you have done Lab 1 before this you may see two topics in the list like below
+
+![image_tag](/static/Lab2_dataflow/image24.png)
+
+
+
+
 ### Create a Log Sink
 - From your Google Cloud Console click the `hamburger again` following by `VIEW ALL PRODUCTS`
 - `Select Observability`
