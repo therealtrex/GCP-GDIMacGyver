@@ -87,17 +87,19 @@ Welcome to Lab 1. Let's get into it!
 - `Click Close` to close off the Private key saved dialog screen
 
 ### Configure your Google Cloud Add-on in Splunk
-- From your Splunk console on the top left hand side. Select Apps, followed by the Splunk Add-on for Google Cloud Platform
+- From your Splunk console on the top left hand side. `Select Apps`, followed by the `Splunk Add-on for Google Cloud Platform`
 
 >[!NOTE]
->By default the Configuration section of the add-on should be open. If it isn't then click the Configuration tab in the middle as shown in image below
+>By default the Configuration section of the add-on should be open. If it isn't then `click the Configuration tab` in the middle as shown in image below
 
 ![image_tag](/static/Lab1_gcpaddon/image10.png)
 
 - From the Google Credentials tab `select the green Add button` on the right hand side 
-- From the Add Google Credentials Page, `enter in a Name` for your GCP credentials of `gcp_creds`
+- From the Add Google Credentials Page, enter in a name for your GCP credentials of `gcp_creds`
 - Make sure `Account Type` is set to `Service Account`
 - `Open the credentals file` you downloaded earlier in the lab and `copy and paste the entire JSON string` into the `Account Creds box`. See example below
+
+![image_tag](/static/Lab1_gcpaddon/image11.png)
 
 >[!NOTE]
 > The image does not show the full JSON text as it is too large and is a scroll bar.  
