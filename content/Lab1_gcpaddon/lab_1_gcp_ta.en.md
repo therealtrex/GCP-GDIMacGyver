@@ -79,7 +79,7 @@ Welcome to Lab 1. Let's get into it!
 - Select the `KEYS` tab
 - Select the `ADD KEY` drop down followed by `Create new key`
 
-![image_tag](/static/Lab1_gcpaddon/image5.png) 
+![image_tag](/static/Lab1_gcpaddon/image8.png) 
 
 - Make sure `JSON` is set as the Key type
 - `Click Create`
