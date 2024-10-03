@@ -65,14 +65,14 @@ From the IAM screen you will see a number of accounts. There should be one calle
 
 ![image_tag](/static/Lab2_dataflow/image5.png)
 
-### Create a Pub/Sub Topic
+### Create Pub/Sub Topic for Deadletter queue
 - From your Google Cloud Console. `Select The Top left hand handburger` followed by `VIEW ALL PRODUCTS`
 
 ![image_tag](/static/Lab2_dataflow/image10.png)
 
 - Select `Analytics` on the left hand menu then `select Pub/Sub`
 - From the Pub/Sub screen select `+ CREATE TOPIC`
-- Name your topic `splunk-dataflow-topic`
+- Name your topic `splunk-dataflow-deadletter-topic`
 - `Click Create` leaving all other defaults
 
 ![image_tag](/static/Lab2_dataflow/image11.png)
