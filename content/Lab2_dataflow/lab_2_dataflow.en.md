@@ -1,4 +1,4 @@
-# Lab 2: Ingesting GCP cloud logging data into Dataflow to Splunk HEC (PUSHL) method. 
+# Ingesting GCP cloud logging data into Dataflow to Splunk HEC (PUSHL) method. 
 Welcome to Lab 2. Let's get into it! 
 
 >[!NOTE]
@@ -38,15 +38,15 @@ Before we can use this lab we need to update the google service account details 
 
 ![image_tag](/static/Lab2_dataflow/image1.png)
 
-- From the IAM screen you will see a number of accounts. There should be one called `<number>-compute@developer.gserviceaccount.com`
+From the IAM screen you will see a number of accounts. There should be one called `<number>-compute@developer.gserviceaccount.com`
 - `Click the Pencil Icon` on the right-hand side next to this service account
 - From the `Role drop down` where it currently should say `Editor`. Select this and change it to `Dataflow Admin`.
-- Click `+ ADD ANOTHER ROLE` and also add `Daaflow Worker` and then `Pub/Sub Subscriber`
+- Click `+ ADD ANOTHER ROLE` and also add `Dataflow Worker` and then `Pub/Sub Subscriber`
 - Once compelted your role should now look like this.
 
 ![image_tag](/static/Lab2_dataflow/image2.png)
 
-- When happy click Save to save changes. 
+- When happy `click SAVE` to save changes. 
 
 ### Create storage bucket for dataflow
 - From your Google Cloud Console. `Select The Top left hand handburger` followed by `Cloud Storage`
@@ -68,14 +68,14 @@ Before we can use this lab we need to update the google service account details 
 ### Create a Pub/Sub Topic
 - From your Google Cloud Console. `Select The Top left hand handburger` followed by `VIEW ALL PRODUCTS`
 
-![image_tag](/static/Lab2_gcpaddon_cli/NEEDONE.png)
+![image_tag](/static/Lab2_gcpaddon_cli/image10.png)
 
 - Select `Analytics` on the left hand menu then `select Pub/Sub`
 - From the Pub/Sub screen select `+ CREATE TOPIC`
 - Name your topic `splunk-dataflow-topic`
 - `Click Create` leaving all other defaults
 
-![image_tag](/static/Lab2_gcpaddon/NEEDOE.png)
+![image_tag](/static/Lab2_gcpaddon/image11.png)
 
 >[!NOTE]
 > This will take around 15 seconds to create.
