@@ -107,8 +107,8 @@ Welcome to Lab 1. Let's get into it!
 - Click Add when done
 
 ### Create Inpout for Compute Engine metadata
-- While still in the Google Cloud Add-on Configuration page, slect the Inputs tab top left hand side
-- From the right hand side now, select the drop down where it says `Create New Input` 
+- While still in the Google Cloud Add-on Configuration page, select the `Inputs tab` top left hand side
+- From the right hand side now, `select the drop down` where it says `Create New Input` 
 
 ![image_tag](/static/Lab1_gcpaddon/image12.png)
 
@@ -131,7 +131,7 @@ Welcome to Lab 1. Let's get into it!
 - If happy, `click Add`
 - Your first input should now appear in list
 
-### Create Inpout for Compute Engine metadata
+### Create Input for Compute Engine metadata
 - From the Input page again, `click Create New Input`
 - This time `select Cloud Monitoring` (note you may need to go back first as it will remember the input selection from last time)
 
@@ -163,6 +163,7 @@ Welcome to Lab 1. Let's get into it!
 - Select `Cloud Pub/Sub`
 - Name your input `logging`
 - `Select your GCP credentials` again (same as last time)
+- `Select your GCP project` again (same as last time)
 - Under Pub/Sub Subscriptions you should see the one you created earlier (eg ta-subscription-sub). `Select the pub/sub from the list`. 
 - Again `under Index click the x` from index and `select you gcp_data` index again. 
 - You should now see the following. 
@@ -174,25 +175,22 @@ Welcome to Lab 1. Let's get into it!
 
 ![image_tag](/static/Lab1_gcpaddon/image34.png)
 
-### Validate our date in Splunk
-- Now its time to check if our data is able to be PULL out of our GCP Cloud project. 
-- Do this by click Apps from the top left hand side of Splunk and then select Search and Reporting
-
-
-- Now let's just check that there is indeed data coming in by running a really poor search.
-- copy and paste the following SPL into the search 
+### Validate our data in Splunk
+Now its time to check if our data is able to be PULL out of our GCP Cloud project. 
+- `Click Apps` from the top left hand side of Splunk and then `Select Search and Reporting`
+- `copy and paste` the `following SPL` into the search 
 
 ```test
 index="gcp_data"
 ```
-
-- Do you see data? 
-- Select the sourcetype field under Selected fields on the left hand side. 
-- How many sourcetypes do you see? If you got three then well done! 
+>[!TIP]
+> Do you see data? 
+> Select the sourcetype field under Selected fields on the left hand side. 
+> How many sourcetypes do you see? If you got `three` then well done! 
 
 ![image_tag](/static/Lab1_gcpaddon/image35.png)
 
-- Now let's try something a little more advanced. Let's see if we can check which service accounts have been created by whom?
+### Now let's try something a little more advanced. Let's see if we can check which service accounts have been created by whom?
 - Copy and  paste the following search below into Splunk
 
 ```text
@@ -204,8 +202,10 @@ index="gcp_data" data.resource.type="service_account" data.protoPayload.methodNa
 | rename data.protoPayload.response.project_id as Project
 | table _time, "Principal Email", "Source IP", "User Agent", Project, "Service Account Email"
 ```
-- Who was the person creating the splunk-ta services account?? It was us! Trick question!
-- Ok, so now we want to find out Who created a service account and which IP it came from? 
+>[!TIP]
+> Who was the person creating the splunk-ta services account?? It was us! Trick question!
+
+### Now we want to find out Who created a service account and which IP it came from? 
 - Copy and paste the SPL below into a new search.
 
 ```text
@@ -221,9 +221,10 @@ index="gcp_data" data.resource.type="service_account" data.protoPayload.methodNa
 | eval "Private Key Type" = case('protoPayload.request.private_key_type' == 0, "Unspecified", 'protoPayload.request.private_key_type' == 1, "PKCS12", 'protoPayload.request.private_key_type' == 2, "Google JSON credential file")
 | table _time, "Principal Email", "Source IP", "User Agent", "Key Name", "Private Key Type", "Valid After", "Valid Before"
 ```
-- So who then exported a key... It was us again. Another trick question!
+>[!TIP] 
+> So who then exported a key... It was us again. Another trick question!
 
-#### Congrautations!!! 
+#### Congratulations!!! 
 You have now completed Lab 1. You can now move on to Lab 2 (when told to do so) or go back to main page. 
 
 ### Click <a>[Next](/content/Lab1_awsaddon/setup_aws_sqs.md)</a> to continue or click <a>[Back](/README.md) to go back to the beginning</a>
