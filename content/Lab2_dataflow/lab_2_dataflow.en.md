@@ -41,8 +41,6 @@ Before we begin we will create a HEC token in Splunk for Dataflow to use.
 - Name your topic `splunk-dataflow-topic`
 - `Click Create` leaving all other defaults
 
-![image_tag](/static/Lab2_dataflow/image26.png)
-
 >[!NOTE]
 > This will take around 15 seconds to create.
 
@@ -106,7 +104,7 @@ From the IAM screen you will see a number of accounts. There should be one calle
 - `Click the Pencil Icon` on the right-hand side next to this service account
 - From the `Role drop down` where it currently should say `Editor`. Select this and change it to `Dataflow Admin`.
 - Click `+ ADD ANOTHER ROLE` and also add `Dataflow Worker` and then `Pub/Sub Subscriber`
-- Once compelted your role should now look like this.
+- Once completed your role should now look like this.
 
 ![image_tag](/static/Lab2_dataflow/image2.png)
 
@@ -150,26 +148,10 @@ From the IAM screen you will see a number of accounts. There should be one calle
 
 ![image_tag](/static/Lab2_dataflow/image13.png)
 
-- While on the pub/sub page, select topics
-
-
 ### Create Pub/Sub Topic for Deadletter queue
-- From your Google Cloud Console. `Select The Top left hand handburger` followed by `VIEW ALL PRODUCTS`
-
-![image_tag](/static/Lab2_dataflow/image10.png)
-
-- Select `Analytics` on the left hand menu then `select Pub/Sub`
-- From the Pub/Sub screen select `+ CREATE TOPIC`
-- Name your topic `splunk-dataflow-deadletter-topic`
-- `Click Create` leaving all other defaults
-
-![image_tag](/static/Lab2_dataflow/image11.png)
-
->[!NOTE]
-> This will take around 15 seconds to create.
-
-### Create subscription to store items forwarded to deadletter queue
-- From your Google Cloud Topic page (you should be there after creating topic before) select CREATE SUBSCRIPTION
+- While on the Pub/Sub page, `select Topics` on the left hand menu
+- From the Pub/Sub screen select the deadletter topic created earlier `splunk-dataflow-deadletter-topic`
+- under the subscriptions select CREATE SUBSCRIPTION
 
 ![image_tag](/static/Lab2_dataflow/image21.png)
 
