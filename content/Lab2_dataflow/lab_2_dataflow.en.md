@@ -139,7 +139,7 @@ From the IAM screen you will see a number of accounts. There should be one calle
 
 ![image_tag](/static/Lab2_dataflow/image11.png)
 
-- While on the Pub/Sub topic page under the Subscriptions section, select CREATE SUBSCRIPTION
+- While on the Pub/Sub topic page under the Subscriptions section, `select CREATE SUBSCRIPTION`
 
 ![image_tag](/static/Lab2_dataflow/image12.png)
 
@@ -169,19 +169,22 @@ From the IAM screen you will see a number of accounts. There should be one calle
 
 ![image_tag](/static/Lab2_dataflow/image46.png)
 
->[!NOTE]
-> If you have done Lab 1 before this you may see two topics in the list like below
 
 ![image_tag](/static/Lab2_dataflow/image24.png)
 
-- Select the splunk-dataflow-topic
-- Select the CREATE SUBSCRIPTION towards the bottom middle of the screen
-- Name the subscription dataflow
+- Select the `splunk-dataflow-topic`
+- `Select `CREATE SUBSCRIPTION` under subscriptions towards the bottom middle of the screen
+- `Name the subscription dataflow`
 
 ![image_tag](/static/Lab2_dataflow/image47.png)
 
 - Leave remaining defaults, `scroll down to the very bottom` and `click CREATE`
 
+>[!NOTE]
+> After creation you should see your subscrpition for dataflow. Note down the Subscription Name for later use
+> (format should be projects/<your-project-id>/subscription/dataflow).
+
+![image_tag](/static/Lab2_dataflow/image49.png)
 
 ### Deploying Pub/Sub Dataflow to Splunk template
 - From your Google Cloud Console. `Select The Top left hand handburger` followed by `VIEW ALL PRODUCTS`
