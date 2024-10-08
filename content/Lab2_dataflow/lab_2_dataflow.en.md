@@ -169,20 +169,18 @@ From the IAM screen you will see a number of accounts. There should be one calle
 
 ![image_tag](/static/Lab2_dataflow/image46.png)
 
-
-![image_tag](/static/Lab2_dataflow/image24.png)
-
 - Select the `splunk-dataflow-topic`
-- `Select `CREATE SUBSCRIPTION` under subscriptions towards the bottom middle of the screen
-- `Name the subscription dataflow`
+- `Select CREATE SUBSCRIPTION` under subscriptions towards the bottom middle of the screen
+- Name the subscription `dataflow`
 
 ![image_tag](/static/Lab2_dataflow/image47.png)
 
 - Leave remaining defaults, `scroll down to the very bottom` and `click CREATE`
 
 >[!NOTE]
-> After creation you should see your subscrpition for dataflow. Note down the Subscription Name for later use
-> (format should be projects/<your-project-id>/subscription/dataflow).
+> After creation you should see your subscription for dataflow. 
+
+- Note down the Subscription Name for later use format should be (projects/<your-project-id>/subscription/dataflow).
 
 ![image_tag](/static/Lab2_dataflow/image49.png)
 
