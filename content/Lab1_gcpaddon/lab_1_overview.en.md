@@ -18,4 +18,4 @@ Below is the architecture pattern used for this lab:
 >Usually this lab would have a pre-requisite of the <a>[GCP add-on](https://splunkbase.splunk.com/app/3088)</a> installed on your Splunk intallation. <b>To make things simpler we have already done this</b>. 
 
 
-### Click <a>[Next](/content/Lab1_gcpaddon/lab_1_gcp_ta.en.md)</a> to continue or click <a>[Back](/content/README.md) to go back to the beginning</a>
+### Click <a>[Next](/content/Lab1_gcpaddon/lab_1_gcp_ta.en.md)</a> to continue or click <a>[Back](/README.md) to go back to the beginning</a>
