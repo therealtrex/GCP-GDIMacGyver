@@ -170,7 +170,7 @@ From the IAM screen you will see a number of accounts. There should be one calle
 ![image_tag](/static/Lab2_dataflow/image46.png)
 
 - Select the `splunk-dataflow-topic`
-- `Select CREATE SUBSCRIPTION` under subscriptions towards the bottom middle of the screen
+- Select `CREATE SUBSCRIPTION` under subscriptions towards the bottom middle of the screen
 - Name the subscription `dataflow`
 
 ![image_tag](/static/Lab2_dataflow/image47.png)
@@ -180,7 +180,7 @@ From the IAM screen you will see a number of accounts. There should be one calle
 >[!NOTE]
 > After creation you should see your subscription for dataflow. 
 
-- Note down the Subscription Name for later use format should be (projects/<your-project-id>/subscription/dataflow).
+- Before moving on `Note down the Subscription Name` for later use. Format should be: projects/<your-project-id>/subscription/dataflow
 
 ![image_tag](/static/Lab2_dataflow/image49.png)
 
@@ -211,10 +211,10 @@ and
     - Pub/Sub Input Subscription: `projects/<your-project-id>/subscriptions/dataflow`
     - Splunk HEC url: This is your Splunk Instance URL with 8088 port at the end. `EXAMPLE ONLY https://trex-i-01fff791c4c427ceb.splunk.show:8088`
     - Output Deadletter Pub/Sub Topic: `projects/<your-project-id>/topics/splunk-dataflow-deadletter-topic`
-    - Leave streaming mode as defaults to At Least Once
+    - Leave streaming mode as defaults to Exactly Once
     - Temporaray Location: `Click Browse` and `select the dataflow bucket we created earlier`. `Add /tmp on the end`. See example below
     ![image_tag](/static/Lab2_dataflow/image38.png)
-    - Leave default settings for both Dataflow Prime and Encryption
+    - Leave default settings for both Dataflow Prime (unticked) and Encryption (Google-managed encryption key)
 - Optional Parameters Section
     - HEC Authenticatoin Token: `Copy the HEC token you created earlier`
     - Batch Size: `10`
@@ -235,7 +235,7 @@ to
 
 ![image_tag](/static/Lab2_dataflow/image40.png)
 
-- You will also see when the tempalte is deploy there is extra information displayed
+- You will also see when the tempalte is deployed there is extra information displayed
 
 ![image_tag](/static/Lab2_dataflow/image40.png)
 
@@ -268,6 +268,6 @@ index="gcp-data"
 - This is because dataflow automatically assigns the sourcetypes basd based on the data from the template. 
 
 #### Congrautations!!! 
-You have now completed Lab 1. You can now move on to Lab 2 (when told to do so) or go back to main page. 
+You have now completed Lab 2. 
 
-### Click <a>[Next](/content/Lab1_awsaddon/setup_aws_sqs.md)</a> to continue or click <a>[Back](/README.md) to go back to the beginning</a>
+### Click <a>[Done](/README.md) to go back to the beginning</a>
