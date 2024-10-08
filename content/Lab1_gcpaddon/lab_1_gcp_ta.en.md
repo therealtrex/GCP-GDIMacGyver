@@ -229,4 +229,4 @@ index="gcp-data" data.resource.type="service_account" data.protoPayload.methodNa
 #### Congratulations!!! 
 You have now completed Lab 1. You can now move on to Lab 2 (when told to do so) or go back to main page. 
 
-### Click <a>[Next](/content/Lab1_awsaddon/setup_aws_sqs.md)</a> to continue or click <a>[Back](/README.md) to go back to the beginning</a>
+### Click <a>[DONE](/README.md) to go back to the main page.</a>
