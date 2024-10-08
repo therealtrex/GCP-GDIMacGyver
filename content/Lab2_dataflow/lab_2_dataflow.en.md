@@ -153,16 +153,16 @@ From the IAM screen you will see a number of accounts. There should be one calle
 - From the Pub/Sub screen select the deadletter topic created earlier `splunk-dataflow-deadletter-topic`
 - under the subscriptions select CREATE SUBSCRIPTION
 
-![image_tag](/static/Lab2_dataflow/image21.png)
+![image_tag](/static/Lab2_dataflow/image12.png)
 
 - Name your subscription id `deadletter`
 - Scroll to bottom leaving all remaining defaults and select 'CREATE'
 
-![image_tag](/static/Lab2_dataflow/image22.png)
+![image_tag](/static/Lab2_dataflow/image13.png)
 
 - Once created you should see something similar to the below
 
-![image_tag](/static/Lab2_dataflow/image23.png)
+![image_tag](/static/Lab2_dataflow/image14.png)
 
 ### Assign a topic
 - From the same page now `select Topics` from the left hand menu
