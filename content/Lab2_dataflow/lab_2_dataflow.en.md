@@ -93,7 +93,7 @@ resource.type="dataflow_step"
 - `Click Create sink` when ready
 - Once completed it should say this
 
-![image_tag](/static/Lab2_dataflow/image48.png)
+![image_tag](/static/Lab2_dataflow/image29.png)
 
 ### Update service account permissions
 Before we can use this lab we need to update the google service account details that Dataflow will use to publish. 
