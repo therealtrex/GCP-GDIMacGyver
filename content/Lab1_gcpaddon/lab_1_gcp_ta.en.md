@@ -60,7 +60,8 @@ Welcome to Lab 1. Let's get into it!
 >[!NOTE]
 >When adding roles you can type the name you are looking for in the Filter by or permission section
 
-- In the Select a Role section find and select ```Compute Admin```
+- In the Select a Role section find and select ```test 
+Compute Admin```
 
 ![image_tag](/static/Lab1_gcpaddon/image4.png) 
 
@@ -182,7 +183,7 @@ Now its time to check if our data is able to be PULL out of our GCP Cloud projec
 - `Click Apps` from the top left hand side of Splunk and then `Select Search and Reporting`
 - `copy and paste` the `following SPL` into the search 
 
-```test
+```text
 index="gcp-data"
 ```
 >[!TIP]
