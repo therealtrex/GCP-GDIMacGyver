@@ -60,8 +60,10 @@ Welcome to Lab 1. Let's get into it!
 >[!NOTE]
 >When adding roles you can type the name you are looking for in the Filter by or permission section
 
-- In the Select a Role section find and select ```test 
-Compute Admin```
+- In the Select a Role section find and select 
+```test 
+Compute Admin
+```
 
 ![image_tag](/static/Lab1_gcpaddon/image4.png) 
 
