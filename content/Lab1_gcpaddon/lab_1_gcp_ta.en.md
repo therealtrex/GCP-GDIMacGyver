@@ -40,7 +40,9 @@ Welcome to Lab 1. Let's get into it!
 
 ![image_tag](/static/Lab1_gcpaddon/image32.png)
 
-- Leave defaults for both logs to include and logs to filter out. `Click next` and then `Create sink` when ready. 
+- Leave defaults (empty) for logs to include in sink and `Click Next`
+- Leave defaluts (empty) for logs to filter out of sink and `Click Next` 
+- Click `Create sink` when ready. 
 
 
 >[!NOTE]
@@ -58,7 +60,7 @@ Welcome to Lab 1. Let's get into it!
 >[!NOTE]
 >When adding roles you can type the name you are looking for in the Filter by or permission section
 
-- In the Select a Role section find and select `Compute Admin`
+- In the Select a Role section find and select ```Compute Admin```
 
 ![image_tag](/static/Lab1_gcpaddon/image4.png) 
 
@@ -120,9 +122,9 @@ Welcome to Lab 1. Let's get into it!
 >[!NOTE]
 > If there is an error at this point then you may have incorrectly entereed the credentials JSON file earlier in the lab. Please re-try the steps again in the lab
 
-- Select `us-central1-a, us-crenteal1-b, us-crenteal1-c and us-crenteal1-f` in the drop down for Zones. 
+- Select `us-central1-a, us-cental1-b, us-cental1-c and us-cental1-f` in the drop down for Zones. 
 - `Leave all API settings as default`
-- For index, `select default` and `click the cross (x)` to then bring up list of other indexes. `Select the gcp_data` index. 
+- For index, `select default` and `click the cross (x)` to then bring up list of other indexes. `select the gcp-data` index. 
 - Leave sourcetype as `google:gcp:resource:metadata`
 - Once completed your panel should look like the below:
 
@@ -148,7 +150,7 @@ Welcome to Lab 1. Let's get into it!
 
 - Leave `Internal as default` of 300
 - Leave `Start Date time as default` of 2024-09-21T19:43:45
-- Under `index` select default then the cross then `select gcp_data`
+- Under `index` select default then the cross then `select gcp-data`
 - You should now see the following. 
 
 ![image_tag](/static/Lab1_gcpaddon/image17.png)
@@ -165,7 +167,7 @@ Welcome to Lab 1. Let's get into it!
 - `Select your GCP credentials` again (same as last time)
 - `Select your GCP project` again (same as last time)
 - Under Pub/Sub Subscriptions you should see the one you created earlier (eg ta-subscription-sub). `Select the pub/sub from the list`. 
-- Again `under Index click the x` from index and `select you gcp_data` index again. 
+- Again `under Index click the x` from index and `select the gcp-data` index again. 
 - You should now see the following. 
 
 ![image_tag](/static/Lab1_gcpaddon/image33.png)
@@ -181,7 +183,7 @@ Now its time to check if our data is able to be PULL out of our GCP Cloud projec
 - `copy and paste` the `following SPL` into the search 
 
 ```test
-index="gcp_data"
+index="gcp-data"
 ```
 >[!TIP]
 > Do you see data? 
@@ -194,7 +196,7 @@ index="gcp_data"
 - Copy and  paste the following search below into Splunk
 
 ```text
-index="gcp_data" data.resource.type="service_account" data.protoPayload.methodName="google.iam.admin.v1.CreateServiceAccount"
+index="gcp-data" data.resource.type="service_account" data.protoPayload.methodName="google.iam.admin.v1.CreateServiceAccount"
 | rename data.protoPayload.authenticationInfo.principalEmail as "Principal Email"
 | rename data.protoPayload.requestMetadata.callerIp as "Source IP"
 | rename data.protoPayload.requestMetadata.callerSuppliedUserAgent as "User Agent"
@@ -209,7 +211,7 @@ index="gcp_data" data.resource.type="service_account" data.protoPayload.methodNa
 - Copy and paste the SPL below into a new search.
 
 ```text
-index="gcp_data" data.resource.type="service_account" data.protoPayload.methodName="google.iam.admin.v1.CreateServiceAccountKey"
+index="gcp-data" data.resource.type="service_account" data.protoPayload.methodName="google.iam.admin.v1.CreateServiceAccountKey"
 | rename data.protoPayload.authenticationInfo.principalEmail as "Principal Email"
 | rename data.protoPayload.requestMetadata.callerIp as "Source IP"
 | rename data.protoPayload.requestMetadata.callerSuppliedUserAgent as "User Agent"
