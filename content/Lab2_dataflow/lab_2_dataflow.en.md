@@ -65,7 +65,7 @@ Before we begin we will create a HEC token in Splunk for Dataflow to use.
 
 - For Sink destination `select Splunk` as the sing service and the `splunk-dataflow-topic` Pub/Sub topic we just created in the Pub/Sub topic; see example below
 
-![image_tag](/static/Lab2_dataflow/image46.png)
+![image_tag](/static/Lab2_dataflow/image26.png)
 
 >[!NOTE]
 > Do not accidentally select then non dataflow one we created from Lab1. 
@@ -76,7 +76,7 @@ Before we begin we will create a HEC token in Splunk for Dataflow to use.
 >[!NOTE]
 > This means we will be sending everything by default
 
-![image_tag](/static/Lab2_dataflow/image46.png)
+![image_tag](/static/Lab2_dataflow/image27.png)
 
 - `Select + Add exclusion` for Choose logs to filter out of sink(optional)
 - enter in `exclude_dataflow` as Exclusion filter name
@@ -85,7 +85,7 @@ Before we begin we will create a HEC token in Splunk for Dataflow to use.
 ```text
 resource.type="dataflow_step"
 ```
-![image_tag](/static/Lab2_dataflow/image47.png)
+![image_tag](/static/Lab2_dataflow/image28.png)
 
 >[!WARNING]
 > If we don't put this exclusion in then the logs from dataflow will be sent to dataflow creating more logs and therefore we would have just created a log infinite loop!
