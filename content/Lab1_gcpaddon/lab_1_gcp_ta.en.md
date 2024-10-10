@@ -206,7 +206,7 @@ index="gcp-ta"
 
 ![image_tag](/static/Lab1_gcpaddon/image35.png)
 
-### Now let's try something a little more advanced. Let's see if we can check which service accounts have been created by whom?
+Now let's try something a little more advanced. Let's see if we can check which service accounts have been created by whom?
 - `Copy and  paste` the following `SPL` below into the search
 
 ```text
@@ -219,9 +219,11 @@ index="gcp-ta" data.resource.type="service_account" data.protoPayload.methodName
 | table _time, "Principal Email", "Source IP", "User Agent", Project, "Service Account Email"
 ```
 >[!TIP]
-> Who was the person creating the splunk-ta services account?? It was us! Trick question!
+> Who was the person creating the mr-empty service account?? It was us! Trick question!
 
-### Now we want to find out Who created a service account and which IP it came from? 
+![image_tag](/static/Lab1_gcpaddon/image38.png)
+
+Now we want to find out Who created a service account and which IP it came from? 
 - `Copy and  paste` the following `SPL` below into the search
 
 ```text
