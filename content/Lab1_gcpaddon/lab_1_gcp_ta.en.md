@@ -187,9 +187,9 @@ Let's generate a new service account to generate some logging!
 - Click `+ CREATE SERVICE ACCOUNT`
 - Enter `mr-empty` as the service account name
 - Enter in optional description
-- Click `CREATE AND CONTINUE`
+- Click `DONE`
 
-![image_tag](/static/Lab1_gcpaddon/image3.png) 
+![image_tag](/static/Lab1_gcpaddon/image37.png) 
 
 ### Validate our data in Splunk
 Now its time to check if our data is able to be PULL out of our GCP Cloud project. 
