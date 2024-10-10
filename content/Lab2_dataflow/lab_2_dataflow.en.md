@@ -145,52 +145,6 @@ From the IAM screen you will see a number of accounts. There should be one calle
 > For this lab a subscription of `splunk-dataflow-dl-topic_sub` will automatically be created. You can view this in the Google Console under Pub/Sub subscriptions.
 > This will be required later on in the lab. 
 
-<!--
-- While on the Pub/Sub topic page under the Subscriptions section, select `CREATE SUBSCRIPTION`
-
-![image_tag](/static/Lab2_dataflow/image12.png)
-
-- Enter `deadletter` as Subscription ID
-- Leave all other defaults, scroll down and `click Create`
-
-![image_tag](/static/Lab2_dataflow/image13.png)
--->
-<!-->
-### Create Pub/Sub Topic for Deadletter queue
-- While on the Pub/Sub page, `select Topics` on the left hand menu
-- From the Pub/Sub screen select the deadletter topic created earlier `splunk-dataflow-deadletter-topic`
-- under the subscriptions select CREATE SUBSCRIPTION
-
-![image_tag](/static/Lab2_dataflow/image12.png)
-
-- Name your subscription id `deadletter`
-- Scroll to bottom leaving all remaining defaults and select 'CREATE'
-
-![image_tag](/static/Lab2_dataflow/image13.png)
-
-- Once created you should see something similar to the below
-
-![image_tag](/static/Lab2_dataflow/image14.png)
--->
-<!-->
-### Assign a topic
-- From the same page now `select Topics` from the left hand menu
-
-![image_tag](/static/Lab2_dataflow/image46.png)
-
-- Select the `splunk-dataflow-topic`
-- Select `CREATE SUBSCRIPTION` under subscriptions towards the bottom middle of the screen
-- Name the subscription `dataflow`
-
-![image_tag](/static/Lab2_dataflow/image47.png)
-
-- Leave remaining defaults, `scroll down to the very bottom` and `click CREATE`
-
->[!NOTE]
-> After creation you should see your subscription for dataflow. 
-
--->
-
 - Before moving on `Note down the Subscription Name` for later use. Format should be: projects/<your-project-id>/subscription/splunk-dataflow-sub
 
 ![image_tag](/static/Lab2_dataflow/image49.png)
