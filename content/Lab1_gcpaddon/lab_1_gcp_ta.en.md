@@ -45,7 +45,7 @@ Welcome to Lab 1. Let's get into it!
 ![image_tag](/static/Lab1_gcpaddon/image32.png)
 
 - Leave defaults (empty) for logs to include in sink and click `Next`
-- Leave defaluts (empty) for logs to filter out of sink and click `Next` 
+- Leave defaults (empty) for logs to filter out of sink and click `Next` 
 - Click `Create sink` when ready. 
 
 
@@ -229,6 +229,8 @@ index="gcp-ta" data.resource.type="service_account" data.protoPayload.methodName
 ```
 >[!TIP] 
 > So who then exported a key... It was us again. Another trick question!
+
+![image_tag](/static/Lab1_gcpaddon/image36.png)
 
 #### Congratulations!!! 
 You have now completed Lab 1. You can now move on to Lab 2 (when told to do so) or go back to main page. 
