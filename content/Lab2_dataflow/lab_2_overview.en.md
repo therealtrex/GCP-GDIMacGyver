@@ -12,7 +12,7 @@ This lab will go through the following:
 ## Architecture Diagram
 Below is the architecture pattern used for this lab:
 
-![image_tag](/static/Lab1_gcpaddon/lab1_architecture.png) 
+![image_tag](/static/Lab2_dataflow/lab2_architecture.png) 
 
 
 >[!NOTE]
