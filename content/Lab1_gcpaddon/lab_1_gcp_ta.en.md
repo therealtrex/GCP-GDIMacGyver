@@ -257,14 +257,20 @@ HINT 3: There are two types
 
 <details>
   <summary>SHOW ANSWER</summary>
+
   - longer way, run the following search
-  ```text
-    index="gcp-ta" sourcetype="google:gcp:resource:metadata"
-  ```
+
+```text
+index="gcp-ta" sourcetype="google:gcp:resource:metadata"
+```
+
   - shorter way, run this search
-  ```test
-    index="gcp-ta" sourcetype="google:gcp:resource:metadata"| top architecture
-  ```
+
+  ```text
+```text
+  index="gcp-ta" sourcetype="google:gcp:resource:metadata"| top architecture
+```
+
 </details>
 
 
