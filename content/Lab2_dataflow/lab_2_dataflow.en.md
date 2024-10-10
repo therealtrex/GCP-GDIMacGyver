@@ -203,8 +203,8 @@ and
 
     ![image_tag](/static/Lab2_dataflow/image50.png)
 
-
-    - `Untick Use Default machine type box`
+    - Leave Workzone empty
+    - Untick `Use Default machine type box`
     - `Select series E2`
     - make sure `e2-medium` is selected 
     - Leave remaining defaults and select `RUN JOB`
