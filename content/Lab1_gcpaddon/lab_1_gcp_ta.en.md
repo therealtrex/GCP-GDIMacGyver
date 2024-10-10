@@ -12,13 +12,17 @@ Welcome to Lab 1. Let's get into it!
 
 - Select `Analytics` on the left hand menu then `select Pub/Sub`
 - From the Pub/Sub screen select `+ CREATE TOPIC`
-- Name your topic `gcp_ta_topic`
+- Name your topic `splunk_ta_topic`
 - `Click Create` leaving all other defaults
 
 ![image_tag](/static/Lab1_gcpaddon/image30.png)
 
 >[!NOTE]
-> This will take around 15 seconds to create.
+>This will take around 15 seconds to create.
+
+>[!IMPORANT]
+> The Google UI (different to the CLI) will automatically create a subscription for you whenever you createa a topic. This will be the same name as the topic with `_sub` appended to it.
+> For this lab our a subscription of splunk_ta_topic_sub will automatically be created. You can view this in the Google Console under Pub/Sub subscriptions.
 
 ### Create a Log Sink
 - From GCP console, select the `three bars` (hamburger) and select `VIEW ALL PRODUCTS`
@@ -166,7 +170,7 @@ Welcome to Lab 1. Let's get into it!
 - Name your input `logging`
 - `Select your GCP credentials` again (same as last time)
 - `Select your GCP project` again (same as last time)
-- Under Pub/Sub Subscriptions you should see the one you created earlier (eg ta-subscription-sub). `Select the pub/sub from the list`. 
+- Under Pub/Sub Subscriptions you should see the one you created earlier (eg splunk-ta-topic_sub). `Select the pub/sub from the list`. 
 - Again `under Index click the x` from index and `select the gcp-data` index again. 
 - You should now see the following. 
 
