@@ -265,12 +265,17 @@ index="gcp-ta" sourcetype="google:gcp:resource:metadata"
 ```
 
 - then click on `architecture` under `INTERESTING FIELDS`
+
+![image_tag](/static/Lab1_gcpaddon/image39.png)
+
 - shorter way, `run this search`
 
 ```text
   index="gcp-ta" sourcetype="google:gcp:resource:metadata"| top architecture
 ```
 - You should see `X86_64` and `ARM64`
+
+![image_tag](/static/Lab1_gcpaddon/image40.png)
 
 </details>
 
