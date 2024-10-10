@@ -207,6 +207,9 @@ and
     - Untick `Use Default machine type box`
     - `Select series E2`
     - make sure `e2-medium` is selected 
+
+    ![image_tag](/static/Lab2_dataflow/image51.png)
+    
     - Leave remaining defaults and select `RUN JOB`
 
 - Once you click RUN JOB look at the right hand side for status. It should change from `Starting...` to `Running`
