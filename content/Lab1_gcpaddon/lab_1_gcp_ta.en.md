@@ -181,6 +181,16 @@ Welcome to Lab 1. Let's get into it!
 
 ![image_tag](/static/Lab1_gcpaddon/image34.png)
 
+### Create a new empty service account to generate some audit logs
+Let's generate a new service account to generate some logging!
+- From GCP console, select the top left `hamburger` (three bars) and select `IAM & Admin` followed by `Service Accounts`
+- Click `+ CREATE SERVICE ACCOUNT`
+- Enter `mr-empty` as the service account name
+- Enter in optional description
+- Click `CREATE AND CONTINUE`
+
+![image_tag](/static/Lab1_gcpaddon/image3.png) 
+
 ### Validate our data in Splunk
 Now its time to check if our data is able to be PULL out of our GCP Cloud project. 
 - Click `Apps` from the top left hand side of Splunk and then select `Search and Reporting`
