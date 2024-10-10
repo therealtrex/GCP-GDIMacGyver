@@ -193,7 +193,7 @@ Let's generate a new service account to generate some logging!
 
 ### Validate our data in Splunk
 Now its time to check if our data is able to be PULL out of our GCP Cloud project. 
-- Click `Apps` from the top left hand side of Splunk and then select `Search and Reporting`
+- From your Splunk console, click `Apps` from the top left hand side of Splunk and then select `Search and Reporting`
 - `Copy and paste` the following `SPL` into the search 
 
 ```text
