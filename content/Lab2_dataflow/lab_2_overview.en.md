@@ -2,10 +2,10 @@
 Welcome to Lab 2. This lab will step you through all required steps to configure the Pub/Sub to Splunk Dataflow template.
 
 This lab will go through the following: 
-- Create a Splunk HEC endpoint for ingestion
-- Creating a Cloud Storage bucket 
-- Expand permissions for GCP service account 
-- Deploy a Pub/Sub topic for deadletter queue
+- Create a Splunk HEC token endpoint for ingestion
+- Creating a Cloud Storage bucket for our dataflow temporary files
+- Expand permissions for our GCP service account used for Dataflow
+- Deploy a Pub/Sub topic and subscription for deadletter queue to handle failed dataflow events
 - Deploy the Splunk dataflow template
 - Validate the data is flowing into Splunk sucessfully. 
 
