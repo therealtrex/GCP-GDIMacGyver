@@ -145,7 +145,7 @@ From the IAM screen you will see a number of accounts. There should be one calle
 > For this lab a subscription of `splunk-dataflow-dl-topic_sub` will automatically be created. You can view this in the Google Console under Pub/Sub subscriptions.
 > This will be required later on in the lab. 
 
-- Before moving on `Note down the Subscription Name` for later use. Format should be: projects/<your-project-id>/subscription/splunk-dataflow-sub
+Before moving on you will noticed the two subscriptions which now exist after creating our two topics. See example image below. 
 
 ![image_tag](/static/Lab2_dataflow/image49.png)
 
@@ -160,8 +160,8 @@ From the IAM screen you will see a number of accounts. There should be one calle
 ![image_tag](/static/Lab2_dataflow/image48.png)
 
 - Enter in `splunk-dataflow` for Job Name
-- Leave region as default eg us-central1 (Iowa)
-- In the Dataflow Tempalte area select it and type in Splunk to filter down the results. Select Pub/Sub to Splunk template. 
+- `Leave region as default` eg us-central1 (Iowa)
+- In the Dataflow Tempalte area select it and type in `Splunk` to filter down the results. Select `Pub/Sub to Splunk template` 
 
 ![image_tag](/static/Lab2_dataflow/image36.png)
 
@@ -172,21 +172,38 @@ and
 >[!NOTE]
 > Afer a few seconds more fields will appear below for you to fill in. 
 
+>[!IMPORTANT]
+> The next section of the lab is tricky. Please take your time and reade the steps carefully! When it doubt ask your instructor!
+
+
 - Enter in the following details required for the Pub/Sub Dataflow template
-    - Pub/Sub Input Subscription: `projects/<your-project-id>/subscriptions/dataflow`
+    - Pub/Sub Input Subscription: `projects/<your-project-id>/subscriptions/splunk-dataflow-topic-sub`
     - Splunk HEC url: This is your Splunk Instance URL with 8088 port at the end. `EXAMPLE ONLY https://trex-i-01fff791c4c427ceb.splunk.show:8088`
-    - Output Deadletter Pub/Sub Topic: `projects/<your-project-id>/topics/splunk-dataflow-deadletter-topic`
+    - Output Deadletter Pub/Sub Topic: `projects/<your-project-id>/topics/splunk-dataflow-dl-topic`
     - Leave streaming mode as defaults to Exactly Once
-    - Temporaray Location: Click `Browse` and select the `dataflow bucket we created earlier`. Add `/tmp` on the end. See example below
+    - Temporaray Location: Click `Browse` and select the `dataflow bucket we created earlier` eg: <your-project-id>-dataflow. 
+    - Click on `SELECT`
+    - Click on the Temporary location and add a `/tmp` on the end. See example below
     ![image_tag](/static/Lab2_dataflow/image38.png)
-    - Leave default settings for both Dataflow Prime (unticked) and Encryption (Google-managed encryption key)
+    
+    >[!NOTE]
+    > You Temporary location field should go from RED to GREEN tick
+
+    - Leave Encryption set as default (Google-managed encryption key)
+    - Leave default settings for both Dataflow Prime (unticked) 
+    
+
 - Optional Parameters Section
-    - HEC Authenticatoin Token: `Copy the HEC token you created earlier`
+    - HEC Authenticatoin Token: `Paste in the HEC token you created earlier`
     - Batch Size: `10`
     - Leave Disable SSL certifications validation (UNTICKED)
     - Maximum number of parallel requests: `4`
     - Leave other defatuls scrolling down to `Max Workers` and set to `2`
     - Click drop down for Workers Region and select `Use Jobs Regoinal Endpoint`
+
+    ![image_tag](/static/Lab2_dataflow/image50.png)
+
+
     - `Untick Use Default machine type box`
     - `Select series E2`
     - make sure `e2-medium` is selected 
