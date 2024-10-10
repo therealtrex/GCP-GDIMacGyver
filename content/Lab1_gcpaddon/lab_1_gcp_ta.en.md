@@ -251,8 +251,8 @@ index="gcp-ta" data.resource.type="service_account" data.protoPayload.methodName
 ### Bonus Challange 1
 Can you find out by looking at the data how many different CPU architecture types there are. 
 
-HINT 1: Checkout the sourcetype: `google:gcp:resource:metadata`
-HINT 2: Perhaps it is one of the `INTERESTING FIELDS`
+HINT 1: Checkout the sourcetype: `google:gcp:resource:metadata`<br>
+HINT 2: Perhaps it is one of the `INTERESTING FIELDS`<br>
 HINT 3: There are two types
 
 <details>
