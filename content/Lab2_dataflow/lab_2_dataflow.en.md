@@ -209,10 +209,10 @@ and
     - make sure `e2-medium` is selected 
 
     ![image_tag](/static/Lab2_dataflow/image51.png)
-    
+
     - Leave remaining defaults and select `RUN JOB`
 
-- Once you click RUN JOB look at the right hand side for status. It should change from `Starting...` to `Running`
+- Once you click RUN JOB `look at the right hand side for status`. It should change from `Starting...` to `Running`
 
 ![image_tag](/static/Lab2_dataflow/image39.png)
 
@@ -220,7 +220,7 @@ to
 
 ![image_tag](/static/Lab2_dataflow/image40.png)
 
-- You will also see when the tempalte is deployed there is extra information displayed
+- You will also see when the template is deployed there is extra information displayed
 
 ![image_tag](/static/Lab2_dataflow/image40.png)
 
@@ -247,10 +247,39 @@ index="gcp-data"
 ![image_tag](/static/Lab2_dataflow/image43.png)
 
 - In our example we have three
-    google:gcp:pubsub:audit:admin_activity
-    google:gcp:pubsub:message
-    google:gcp:pubsub:platform
-- This is because dataflow automatically assigns the sourcetypes basd based on the data from the template. 
+    google:gcp:pubsub:audit:admin_activity<br>
+    google:gcp:pubsub:message<br>
+    google:gcp:pubsub:platform<br>
+- This is because Splunk using its magic automatically worked out the sourcetype based on the Google Add-on's settings. 
+
+### Diagnosing Dataflow Errors
+Let's have a quick look at how we might diagnose datalow errors in GCP
+- From your Google Cloud console (you should should still be in the dataflow page), select `Jobs` 
+
+>[!NOTE]
+> Did  you accidentally click somewhere else? No worries, Click the `hamburger` again, select `View all products`, `analytics`, `dataflow`
+> Select your job and then you will find your jobs section in left hand menu. 
+
+- Select our dataflow running job we created earlier
+
+![image_tag](/static/Lab2_dataflow/image52.png)
+
+- Down the very bottom of the page you will see Logs with a SHOW icon. Click the SHOW icon
+
+![image_tag](/static/Lab2_dataflow/image53.png)
+
+- From here the default is the Job logs. Explore these logs
+
+>[!NOTE]
+> Job logs show us the wholistic running of the dataflow service
+
+- Select the `worker logs` and explore these
+
+>[!NOTE]
+> Worker logs show us logging in relation to the function of the workers individually. 
+
+
+
 
 #### Congrautations!!! 
 You have now completed Lab 2. 
