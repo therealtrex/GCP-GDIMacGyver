@@ -1,11 +1,12 @@
 # Lab 1: Ingesting GCP cloud logging data into Splunk using the Splunk Add-on for GCP (PULL) method. 
-Welcome to Lab 1. This lab will step you through all required steps to GCP cloud data using the Splunk Add-on for Google Cloud PULL method.
+Welcome to Lab 1. This lab will step you through all required steps to ingest GCP cloud data using the Splunk Add-on for Google Cloud PULL method.
 
 This lab will go through the following: 
-- Creating a Pub/Sub topic Log Sink to use for sending log data to a Pub/Sub subscription
+- Creating a Pub/Sub topic and Subscription for our logs
+- Create a Cloud Logging log sink to log data to our Pub/Sub topic
 - Create a Google Cloud Service Account to use with the Splunk Add-on for Google Cloud Platform 
 - Configure the service account credentials into the Splunk Google Cloud Add-on
-- Create a three modular inputs on the Google Cloud Add-on
+- Create three modular inputs on the Google Cloud Add-on for Pub/Sub Logs, Cloud Monitoring CPU metrics and Compute Engine Metadata
 - Lastly we will briefly explore the data to make sure it is ingesting ok. 
 
 ## Architecture Diagram
