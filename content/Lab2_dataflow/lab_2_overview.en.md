@@ -7,7 +7,7 @@ This lab will go through the following:
 - Expand permissions for our GCP service account used for Dataflow
 - Deploy a Pub/Sub topic and subscription for deadletter queue to handle failed dataflow events
 - Deploy the Splunk dataflow template
-- Validate the data is flowing into Splunk sucessfully. 
+- Validate the data is flowing into Splunk successfully. 
 
 ## Architecture Diagram
 Below is the architecture pattern used for this lab:
