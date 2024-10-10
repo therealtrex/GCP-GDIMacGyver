@@ -264,12 +264,13 @@ HINT 3: There are two types
 index="gcp-ta" sourcetype="google:gcp:resource:metadata"
 ```
 
-  - shorter way, run this search
+- then click on `architecture` under `INTERESTING FIELDS`
+- shorter way, `run this search`
 
-  ```text
 ```text
   index="gcp-ta" sourcetype="google:gcp:resource:metadata"| top architecture
 ```
+- You should see `X86_64` and `ARM64`
 
 </details>
 
