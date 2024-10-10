@@ -145,7 +145,7 @@ From the IAM screen you will see a number of accounts. There should be one calle
 > For this lab a subscription of `splunk-dataflow-dl-topic_sub` will automatically be created. You can view this in the Google Console under Pub/Sub subscriptions.
 > This will be required later on in the lab. 
 
-<!-->
+<!--
 - While on the Pub/Sub topic page under the Subscriptions section, select `CREATE SUBSCRIPTION`
 
 ![image_tag](/static/Lab2_dataflow/image12.png)
