@@ -3,7 +3,7 @@ Welcome to Lab 1. Let's get into it!
 
 >[!NOTE]
 >Usually this lab would have a two pre-requisites of the <a>[GCP add-on](https://splunkbase.splunk.com/app/3088)</a> installed on your Splunk intallation and a Splunk index to store all the data. To make things simpler we have already done this.
->Throughout this lab whenever you are prompted to select a Splunk index please use <b>gcp_data</b> 
+>Throughout this lab whenever you are prompted to select a Splunk index please use <b>gcp-ta</b> 
 
 ### Create a Pub/Sub Topic
 - From GCP console, select the top left `handburger` (three bars) and select `VIEW ALL PRODUCTS`
@@ -128,7 +128,7 @@ Welcome to Lab 1. Let's get into it!
 
 - Select `us-central1-a, us-cental1-b, us-cental1-c and us-cental1-f` in the drop down for Zones. 
 - `Leave all API settings as default`
-- For index, select `default` and click the `cross (x)` to then bring up list of other indexes. select the `gcp-data` index. 
+- For index, select `default` and click the `cross (x)` to then bring up list of other indexes. select the `gcp-ta` index. 
 - Leave sourcetype as `google:gcp:resource:metadata`
 - Once completed your panel should look like the below:
 
@@ -154,7 +154,7 @@ Welcome to Lab 1. Let's get into it!
 
 - Leave `Internal as default` of 300
 - Leave `Start Date time as default` of 2024-09-21T19:43:45
-- Under `index` select default then the cross then select `gcp-data`
+- Under `index` select default then the cross then select `gcp-ta`
 - You should now see the following. 
 
 ![image_tag](/static/Lab1_gcpaddon/image17.png)
@@ -171,7 +171,7 @@ Welcome to Lab 1. Let's get into it!
 - `Select your GCP credentials` again (same as last time)
 - `Select your GCP project` again (same as last time)
 - Under Pub/Sub Subscriptions you should see the one you created earlier (eg splunk-ta-topic_sub). `Select the pub/sub from the list`. 
-- Again under Index click the `x` from index and select the `gcp-data` index again. 
+- Again under Index click the `x` from index and select the `gcp-ta` index again. 
 - You should now see the following. 
 
 ![image_tag](/static/Lab1_gcpaddon/image33.png)
@@ -187,7 +187,7 @@ Now its time to check if our data is able to be PULL out of our GCP Cloud projec
 - `Copy and paste` the following `SPL` into the search 
 
 ```text
-index="gcp-data"
+index="gcp-ta"
 ```
 >[!TIP]
 > Do you see data? 
@@ -200,7 +200,7 @@ index="gcp-data"
 - `Copy and  paste` the following `SPL` below into the search
 
 ```text
-index="gcp-data" data.resource.type="service_account" data.protoPayload.methodName="google.iam.admin.v1.CreateServiceAccount"
+index="gcp-ta" data.resource.type="service_account" data.protoPayload.methodName="google.iam.admin.v1.CreateServiceAccount"
 | rename data.protoPayload.authenticationInfo.principalEmail as "Principal Email"
 | rename data.protoPayload.requestMetadata.callerIp as "Source IP"
 | rename data.protoPayload.requestMetadata.callerSuppliedUserAgent as "User Agent"
@@ -215,7 +215,7 @@ index="gcp-data" data.resource.type="service_account" data.protoPayload.methodNa
 - `Copy and  paste` the following `SPL` below into the search
 
 ```text
-index="gcp-data" data.resource.type="service_account" data.protoPayload.methodName="google.iam.admin.v1.CreateServiceAccountKey"
+index="gcp-ta" data.resource.type="service_account" data.protoPayload.methodName="google.iam.admin.v1.CreateServiceAccountKey"
 | rename data.protoPayload.authenticationInfo.principalEmail as "Principal Email"
 | rename data.protoPayload.requestMetadata.callerIp as "Source IP"
 | rename data.protoPayload.requestMetadata.callerSuppliedUserAgent as "User Agent"
