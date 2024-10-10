@@ -119,7 +119,7 @@ From the IAM screen you will see a number of accounts. There should be one calle
 ![image_tag](/static/Lab2_dataflow/image3.png)
 
 - Click `Continue`
-- Click the `Region radio button` and `leave the defaulted region` in the drop down (should be us-east1 (South Carolina))
+- Click the `Region` radio button and `leave the defaulted region` in the drop down (should be us-east1 (South Carolina))
 
 ![image_tag](/static/Lab2_dataflow/image4.png)
 
