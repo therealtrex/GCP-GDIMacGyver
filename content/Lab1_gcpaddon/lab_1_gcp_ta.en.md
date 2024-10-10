@@ -6,7 +6,7 @@ Welcome to Lab 1. Let's get into it!
 >Throughout this lab whenever you are prompted to select a Splunk index please use <b>gcp-ta</b> 
 
 ### Create a Pub/Sub Topic
-- From GCP console, select the top left `handburger` (three bars) and select `VIEW ALL PRODUCTS`
+- From GCP console, select the top left `hamburger` (three bars) and select `VIEW ALL PRODUCTS`
 
 ![image_tag](/static/Lab1_gcpaddon/image20.png)
 
@@ -25,7 +25,7 @@ Welcome to Lab 1. Let's get into it!
 > For this lab a subscription of `splunk_ta_topic_sub` will automatically be created. You can view this in the Google Console under Pub/Sub subscriptions.
 
 ### Create a Log Sink
-- From GCP console, select the top left `handburger` (three bars) and select `VIEW ALL PRODUCTS`
+- From GCP console, select the top left `hamburger` (three bars) and select `VIEW ALL PRODUCTS`
 - Select the `Observability` Category followed by `Logging`
 - In the Logging section from the left hand menu (may need to hover mouse on left hand side) select `Log Router`
 
@@ -53,7 +53,7 @@ Welcome to Lab 1. Let's get into it!
 > This will sent all logs to this sink. This may not be best practice for your environment but for this lab will be fine. 
 
 ### Create Service Account for GCP add-on
-- From GCP console, select the top left `handburger` (three bars) and select `IAM & Admin` followed by `Service Accounts`
+- From GCP console, select the top left `hamburger` (three bars) and select `IAM & Admin` followed by `Service Accounts`
 - Click `+ CREATE SERVICE ACCOUNT`
 - Enter `splunk-ta` as the service account name
 - Enter in optional description
