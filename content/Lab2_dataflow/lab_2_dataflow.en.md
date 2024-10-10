@@ -32,7 +32,7 @@ Before we begin we will create a HEC token in Splunk for Dataflow to use.
 >You will noticed we did not have HEC acknowledgement enabled on this HEC token. That is because the Google Dataflow template does not have the ability to check the acknowledgement of indexed data in Splunk. 
 
 ### Create Datafow Topic
-- From GCP console, select the top left `handburger` (three bars) and select `VIEW ALL PRODUCTS`
+- From GCP console, select the top left `hamburger` (three bars) and select `VIEW ALL PRODUCTS`
 
 ![image_tag](/static/Lab2_dataflow/image10.png)
 
@@ -50,7 +50,7 @@ Before we begin we will create a HEC token in Splunk for Dataflow to use.
 
 
 ### Create a Log Sink
-- From GCP console, select the top left `handburger` (three bars) and select `VIEW ALL PRODUCTS`
+- From GCP console, select the top left `hamburger` (three bars) and select `VIEW ALL PRODUCTS`
 - Select `Observability`
 - Select `Logging`
 
@@ -129,7 +129,7 @@ From the IAM screen you will see a number of accounts. There should be one calle
 ![image_tag](/static/Lab2_dataflow/image5.png)
 
 ### Creating Dead Letter Queue
-- From GCP console, select the top left `handburger` (three bars) and select `VIEW ALL PRODUCTS`
+- From GCP console, select the top left `hamburger` (three bars) and select `VIEW ALL PRODUCTS`
 
 ![image_tag](/static/Lab2_dataflow/image10.png)
 
@@ -196,7 +196,7 @@ From the IAM screen you will see a number of accounts. There should be one calle
 ![image_tag](/static/Lab2_dataflow/image49.png)
 
 ### Deploying Pub/Sub Dataflow to Splunk template
-- From GCP console, select the top left `handburger` (three bars) and select `VIEW ALL PRODUCTS`
+- From GCP console, select the top left `hamburger` (three bars) and select `VIEW ALL PRODUCTS`
 
 ![image_tag](/static/Lab2_dataflow/image10.png)
 
