@@ -242,7 +242,33 @@ index="gcp-ta" data.resource.type="service_account" data.protoPayload.methodName
 >[!TIP] 
 > So who then exported a key... It was us again. Another trick question!
 
+>[!NOTE]
+>If you do not see any results from your search it could be you were too fast in the steps and the log sink may not have been operational before creating the keys. 
+>In your console you can go back into IAM and Admin, service accounts. Click on your new mr-empty user and generate a key for them. Then re-run the search.
+
 ![image_tag](/static/Lab1_gcpaddon/image36.png)
+
+### Bonus Challange 1
+Can you find out by looking at the data how many different CPU architecture types there are. 
+
+HINT 1: Checkout the sourcetype: `google:gcp:resource:metadata`
+HINT 2: Perhaps it is one of the `INTERESTING FIELDS`
+HINT 3: There are two types
+
+<details>
+  <summary>SHOW ANSWER</summary>
+  - longer way, run the following search
+  ```text
+    index="gcp-ta" sourcetype="google:gcp:resource:metadata"
+  ```
+  - shorter way, run this search
+  ```test
+    index="gcp-ta" sourcetype="google:gcp:resource:metadata"| top architecture
+  ```
+</details>
+
+
+
 
 #### Congratulations!!! 
 You have now completed Lab 1. You can now move on to Lab 2 (when told to do so) or go back to main page. 
