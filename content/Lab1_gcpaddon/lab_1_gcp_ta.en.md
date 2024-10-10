@@ -20,7 +20,7 @@ Welcome to Lab 1. Let's get into it!
 >[!NOTE]
 >This will take around 15 seconds to create.
 
->[!WARNING]
+>[!IMPORTANT]
 > The Google UI (different to the CLI) will automatically create a subscription for you whenever you createa a topic. This will be the same name as the topic with `_sub` appended to it.
 > For this lab our a subscription of splunk_ta_topic_sub will automatically be created. You can view this in the Google Console under Pub/Sub subscriptions.
 
