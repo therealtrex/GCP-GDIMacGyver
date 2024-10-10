@@ -279,7 +279,36 @@ index="gcp-ta" sourcetype="google:gcp:resource:metadata"
 
 </details>
 
+### Bonus Challange 2
+Are there any VMs running in our GCP environment?
 
+HINT 1: Checkout the sourcetype: `google:gcp:monitoring`<br>
+HINT 2: Perhaps it is one of the `INTERESTING FIELDS`<br>
+HINT 3: Yes, there are, but what's it called?
+
+<details>
+  <summary>SHOW ANSWER</summary>
+
+  - longer way, run the following search
+
+```text
+index="gcp-ta" sourcetype="google:gcp:monitoring"
+```
+
+- then click on `metric.labels.instance_name` under `INTERESTING FIELDS`
+
+![image_tag](/static/Lab1_gcpaddon/image41.png)
+
+- shorter way, `run this search`
+
+```text
+  index="gcp-ta" sourcetype="google:gcp:monitoring"  "metric.labels.instance_name"="utility-vm" | table metric.labels.instance_name | dedup metric.labels.instance_name
+```
+- You should see `utility-vm`
+
+![image_tag](/static/Lab1_gcpaddon/image42.png)
+
+</details>
 
 
 #### Congratulations!!! 
