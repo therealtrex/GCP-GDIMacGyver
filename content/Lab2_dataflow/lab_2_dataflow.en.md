@@ -252,6 +252,57 @@ index="gcp-data"
     google:gcp:pubsub:platform<br>
 - This is because Splunk using its magic automatically worked out the sourcetype based on the Google Add-on's settings. 
 
+### Let's Try Some more Advanced Searches
+Now we can try and do a few more searches to see what is in our data. 
+
+For our first search we want to get an activity feed of create, update and delete events in our compute environment. 
+Example: Did someone just launch 1000 virtual machines???
+
+- `Copy and paste` the following SPL into the `search bar` and press `enter`
+
+Let's just try a basic search again
+
+- Type the following into Splunk Search bar and hit enter
+
+```text
+index="gcp-data" resource.type="gce_instance" operation.first=true
+| regex protoPayload.methodName="^\w+?\.compute\.instances\.\w+?$"
+| rename protoPayload.methodName as "API Method"
+| rename protoPayload.authenticationInfo.principalEmail as "Principal Email"
+| rename protoPayload.requestMetadata.callerIp as "Source IP"
+| rename protoPayload.requestMetadata.callerSuppliedUserAgent as "User Agent"
+| rename protoPayload.resourceName as "Resource Name"
+| table _time, "Principal Email", "Source IP", "User Agent", "API Method", "Resource Name"
+```
+
+You should see something like the below
+
+![image_tag](/static/Lab2_dataflow/image54.png)
+
+For our last search we would like to check if any machines have ben launched with recently compromised accounts
+Our first is a developer account. 
+
+`Copy and paste` the SPL below into our Splunk search and press `enter`
+
+```text
+index=gcp-data resource.type="gce_instance" "protoPayload.request.serviceAccounts{}.email"="*developer*"
+| regex protoPayload.methodName="^\w+?\.?compute\.instances\.insert"
+| rename protoPayload.methodName as "API Method"
+| rename protoPayload.authenticationInfo.principalEmail as "Principal Email"
+| rename protoPayload.requestMetadata.callerIp as "Source IP"
+| rename protoPayload.requestMetadata.callerSuppliedUserAgent as "User Agent"
+| rename protoPayload.resourceName as "Resource Name"
+| rename "protoPayload.request.serviceAccounts{}.email" as "Service Account"
+| table _time, "Principal Email", "Source IP", "User Agent", "Resource Name", "Service Account"
+```
+
+You should see our our dataflow instance. See example below 
+
+![image_tag](/static/Lab2_dataflow/image55.png)
+
+>[!NOTE]
+> In reality we would put a more accurate search rather than *developer* into the search box. 
+
 ### Diagnosing Dataflow Errors
 Let's have a quick look at how we might diagnose datalow errors in GCP
 - From your Google Cloud console (you should should still be in the dataflow page), select `Jobs` 
