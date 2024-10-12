@@ -173,7 +173,7 @@ and
 > Afer a few seconds more fields will appear below for you to fill in. 
 
 >[!IMPORTANT]
-> The next section of the lab is tricky. Please take your time and reade the steps carefully! When it doubt ask your instructor!
+> The next section of the lab is tricky. Please take your time and read the steps carefully! When it doubt ask your instructor!
 
 
 - Enter in the following details required for the Pub/Sub Dataflow template
