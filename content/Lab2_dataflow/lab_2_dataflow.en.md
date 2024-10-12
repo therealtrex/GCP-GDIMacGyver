@@ -222,7 +222,7 @@ to
 
 - You will also see when the template is deployed there is extra information displayed
 
-![image_tag](/static/Lab2_dataflow/image40.png)
+![image_tag](/static/Lab2_dataflow/image44.png)
 
 
 ### Time to explore some data
