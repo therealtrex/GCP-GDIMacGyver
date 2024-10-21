@@ -35,4 +35,4 @@ Below are the links to each of the labs
 
 <a>[LAB1 - Configure Splunk GCP Add-on to PULL logs to Splunk](/content/Lab1_gcpaddon/lab_1_overview.en.md) </a>
 
-<a>[LAB2 - Configure Google Dataflow to PUH logs to Splunk ](/content/Lab2_dataflow/lab_2_overview.en.md) </a>
+<a>[LAB2 - Configure Google Dataflow to PUSH logs to Splunk ](/content/Lab2_dataflow/lab_2_overview.en.md) </a>
