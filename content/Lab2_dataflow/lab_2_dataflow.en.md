@@ -1,4 +1,4 @@
-# Ingesting GCP cloud logging data into Dataflow to Splunk HEC (PUSHL) method. 
+# Ingesting GCP cloud logging data into Dataflow to Splunk HEC (PUSH) method. 
 Welcome to Lab 2. Let's get into it! 
 
 >[!NOTE]
