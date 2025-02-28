@@ -185,12 +185,13 @@ and
     - Click on `SELECT`
     - Click on the Temporary location and add a `/tmp` on the end. See example below
     ![image_tag](/static/Lab2_dataflow/image38.png)
+    - Leave Encryption set as default (Google-managed encryption key)
+    - Leave default settings for both Dataflow Prime (unticked) 
     
 >[!NOTE]
 > You Temporary location field should go from RED to GREEN tick
 
-    - Leave Encryption set as default (Google-managed encryption key)
-    - Leave default settings for both Dataflow Prime (unticked) 
+
     
 
 - Optional Parameters Section
