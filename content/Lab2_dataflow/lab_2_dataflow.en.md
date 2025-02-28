@@ -187,9 +187,9 @@ and
     ![image_tag](/static/Lab2_dataflow/image38.png)
     - Leave Encryption set as default (Google-managed encryption key)
     - Leave default settings for both Dataflow Prime (unticked) 
-    
+
 >[!NOTE]
-> You Temporary location field should go from RED to GREEN tick
+> Confirm your Temporary location field should go from RED to GREEN tick as shown in image above
 
 
     
