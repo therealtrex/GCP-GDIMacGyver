@@ -113,7 +113,7 @@ From the IAM screen you will see a number of accounts. There should be one calle
 
 ### Create storage bucket for dataflow
 - From GCP console, select the top left `handburger` (three bars) and select `Cloud Storage`
-- Click the `+ CREATE` button
+- Click the `+ CREATE BUCKET` button
 - On the Get started section. Enter a unique name for your bucket. Eg `<gcp-project-id->-dataflow`
 
 ![image_tag](/static/Lab2_dataflow/image3.png)
@@ -186,8 +186,8 @@ and
     - Click on the Temporary location and add a `/tmp` on the end. See example below
     ![image_tag](/static/Lab2_dataflow/image38.png)
     
-    >[!NOTE]
-    > You Temporary location field should go from RED to GREEN tick
+>[!NOTE]
+> You Temporary location field should go from RED to GREEN tick
 
     - Leave Encryption set as default (Google-managed encryption key)
     - Leave default settings for both Dataflow Prime (unticked) 
