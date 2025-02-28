@@ -45,8 +45,8 @@ Welcome to Lab 1. Let's get into it!
 ![image_tag](/static/Lab1_gcpaddon/image32.png)
 
 - Leave defaults (empty) for logs to include in sink and click `Next`
-- Leave defaults (empty) for logs to filter out of sink and click `Next` 
-- Click `Create sink` when ready. 
+- Leave defaults (empty) for logs to filter out of sink. 
+- On last screen click `Create sink` when ready. 
 
 
 >[!NOTE]
