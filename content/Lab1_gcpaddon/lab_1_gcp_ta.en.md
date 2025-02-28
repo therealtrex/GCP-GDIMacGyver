@@ -128,7 +128,7 @@ Welcome to Lab 1. Let's get into it!
 
 - Select `us-central1-a, us-cental1-b, us-cental1-c and us-cental1-f` in the drop down for Zones. 
 - `Leave all API settings as default`
-- For index, select `default` and click the `cross (x)` to then bring up list of other indexes. select the `gcp-ta` index. 
+- For index we need to change this. Select `default` and click the `cross (x)` to then bring up list of other indexes. select the `gcp-ta` index. 
 - Leave sourcetype as `google:gcp:resource:metadata`
 - Once completed your panel should look like the below:
 
@@ -153,8 +153,8 @@ Welcome to Lab 1. Let's get into it!
 >This may take a little while to respond on the monitor metrics because it has to build out the list. It is also recommended you copy and paste from above to make it easier to find right one.
 
 - Leave `Internal as default` of 300
-- Leave `Start Date time as default` of 2024-09-21T19:43:45
-- Under `index` select default then the cross then select `gcp-ta`
+- Leave `Start Date time as default` as the default example: 2024-09-21T19:43:45
+- Let's again change the index. Under `index` select `default` then the `cross (x)` then select `gcp-ta`
 - You should now see the following. 
 
 ![image_tag](/static/Lab1_gcpaddon/image17.png)
