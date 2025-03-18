@@ -152,7 +152,7 @@ Welcome to Lab 1. Let's get into it!
 >[!NOTE]
 >This may take a little while to respond on the monitor metrics because it has to build out the list. It is also recommended you copy and paste from above to make it easier to find right one.
 
-- Leave `Internal as default` of 300
+- Leave `Interval as default` of 300
 - Leave `Start Date time as default` as the default example: 2024-09-21T19:43:45
 - Let's again change the index. Under `index` select `default` then the `cross (x)` then select `gcp-ta`
 - You should now see the following. 
